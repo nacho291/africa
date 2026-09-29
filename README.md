@@ -27,19 +27,23 @@ El progreso se guarda en el propio dispositivo (`localStorage`); no hay cuentas 
 
 ## Despliegue
 
-Es un sitio estático. Cualquiera de estas opciones funciona sin configuración:
+Está publicado en **Netlify** como sitio estático, sin paso de build. La configuración está en `netlify.toml`.
 
-- **Vercel**: importa este repositorio en [vercel.com/new](https://vercel.com/new) y despliega. Ya incluye un `vercel.json` mínimo.
-- **Netlify**: arrastra la carpeta o conecta el repo.
-- **GitHub Pages**: Settings → Pages → rama `main`, carpeta `/ (root)`.
+Para desplegar tu propia copia:
 
-Para probarlo en local basta con abrir `index.html` en el navegador.
+1. Haz un fork de este repositorio.
+2. En [app.netlify.com/start](https://app.netlify.com/start), elige **GitHub** y selecciona el repositorio.
+3. Deja el comando de build vacío y el directorio de publicación en `.` (ya viene en `netlify.toml`) y pulsa **Deploy**.
+
+Cada cambio que se sube a `main` se publica automáticamente.
+
+También funciona en GitHub Pages (Settings → Pages → rama `main`, carpeta `/ (root)`) o en cualquier hosting estático. Para probarlo en local basta con abrir `index.html` en el navegador.
 
 ## Estructura
 
 ```
 index.html   La aplicación completa (HTML + CSS + JS + geometría del mapa)
-vercel.json  Configuración mínima para Vercel
+netlify.toml Configuración de Netlify
 LICENSE      Licencia MIT
 README.md
 ```
